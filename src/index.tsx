@@ -2,7 +2,8 @@ import React, { ReactNode } from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './pages/App';
 import Chat from './pages/Chat';
-import './styles/global.css'
+import Login from './pages/Login';
+import './styles/global.scss'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(
@@ -14,6 +15,7 @@ root.render(
       <Routes>
       <Route path="/" element={<App />} />
       <Route path="/chat" element={<Chat />} />
+      <Route path="/login" element={<Login />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
