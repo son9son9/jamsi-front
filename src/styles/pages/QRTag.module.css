@@ -1,10 +1,9 @@
 .container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 3rem 2rem;
   text-align: center;
 
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,7 +12,7 @@
 
 .qr-wrapper {
   --b: 4px; /* thickness of the border */
-  --c: dodgerblue; /* color of the border */
+  --c: rgb(30, 144, 255); /* color of the border */
   --w: 30px; /* width of border */
 
   border: var(--b) solid #0000; /* space for the border */
@@ -27,14 +26,14 @@
   width: fit-content;
   margin: 0 auto;
   padding: 1rem;
-  margin: 4rem 0;
+  margin: 3rem 0;
 }
 
 .title {
   font-size: 1.8rem;
   margin: 0 0 1rem 0;
   padding: 0;
-  color: #3f3f3f;
+  color: #4a4a4a;
 }
 
 .subtitle {
@@ -43,24 +42,25 @@
   color: rgba(0, 0, 0, 0.6);
 }
 
-.qr-share-button {
-  border: 0;
-  border-radius: 30px;
-  background-color: dodgerblue;
-  color: #fff;
-  padding: 1rem 3rem;
-  line-height: 0;
+.clock-box {
+  background-color: #f7f7f7;
+  padding: 0.2rem;
+  border-radius: 0.3rem;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 0.9rem;
 
   display: flex;
   align-items: center;
 }
 
-.clock-box {
-  background-color: rgba(16, 76, 137, 0.1);
-  padding: 0.3rem;
-  border-radius: 0.3rem;
-  color: rgba(0, 0, 0, 0.5);
-  font-size: 0.9rem;
+.qr-share-button {
+  border: 0;
+  border-radius: 30px;
+  background-color: dodgerblue;
+  color: #fff;
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  line-height: 0;
 
   display: flex;
   align-items: center;

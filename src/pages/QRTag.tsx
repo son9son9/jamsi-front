@@ -14,7 +14,13 @@ export default function qrTag(): ReactElement {
         <span>&nbsp;9:58</span>
       </div>
       <div className={style["qr-wrapper"]}>
-        <QRCodeSVG value="www.naver.com" size={180} bgColor={"#ffffff"} fgColor={"#3f3f3f"} includeMargin={false} />
+        <QRCodeSVG
+          value="https://app.gather.town/app/4sJuNAr2duwHuDnN/simsimpuri"
+          size={180}
+          bgColor={"#f7f7f7"}
+          fgColor={"rgb(29, 125, 222)"}
+          includeMargin={true}
+        />
       </div>
       <button type="button" className={style["qr-share-button"]}>
         <Chain width="24" height="24" />
