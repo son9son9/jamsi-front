@@ -4,7 +4,7 @@ import React, { ReactElement } from 'react';
 import {Socket, connect} from 'socket.io-client';
 import st from '../styles/pages/Home.module.scss'
 
-const socket:Socket = connect('http://localhost:4000')
+// const socket:Socket = connect('http://localhost:4000')
 
 export default function Home(): ReactElement {
   return (
