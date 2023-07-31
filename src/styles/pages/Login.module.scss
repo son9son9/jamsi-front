@@ -1,29 +1,41 @@
 @import "../global.scss";
 
 @media (max-width: $mobile-widht) {
-    .container{
+    .container {
         width: 100%;
         height: 100vh;
-        background-color: #00ff00;
+        background: #FFF;
 
         display: flex;
         flex-direction: column;
         align-items: center;
 
 
-        p:nth-of-type(1){
-            color: #ff00ff;
-        }
-        p:nth-of-type(2){
-            color: #ff0000;
+        p:nth-of-type(1) {
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            color: #757575;
+
         }
 
-        img{
+        p:nth-of-type(2) {
+            color: #ff0000;
+            font-size: 21px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            color: #757575;
+        }
+
+        img {
             width: 119px;
             height: 49px;
             background-color: #000000;
         }
-        button{
+
+        button {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -31,17 +43,70 @@
             height: 57px;
             border-radius: 10px;
             border: none;
-        }
-        button:nth-of-type(1){
-        }
-        button:nth-of-type(2){
+
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
         }
 
-        .joinContainer{
+        button:nth-of-type(1) {
+            background: #509BF8;
+            color: #FEFEFE;
+
+        }
+
+        button:nth-of-type(2) {
+            background: #FFF;
+            border: solid 1px #EDEDED !important;
+        }
+
+        .joinContainer {
             display: flex;
             flex-direction: row;
             align-items: center;
+            color: var(--gray-scale-gray-600, #757575);
 
+            p {
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                color: #C4C4C4;
+            }
+
+            a {
+                color: #757575;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
         }
     }
+}
+
+.mt118{
+    margin-top: 118px;
+}
+
+.mt7{
+    margin-top: 7px;
+}
+.mt26{
+    margin-top: 26px;
+}
+
+.mt48{
+    margin-top: 48px;
+}
+
+.mt17{
+    margin-top: 17px;
+}
+.mt41{
+    margin-top: 41px;
+}
+.ml10{
+    margin-left: 10px;
 }
