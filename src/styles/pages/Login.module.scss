@@ -10,23 +10,23 @@
 
         .line {
             width: 100%;
-            height: 12px;
+            height: $size12px;
 
-            background-color: #F5F5F7;
+            background-color: $white-1;
         }
 
         .text1 {
-            color: #757575;
-            font-size: 18px;
+            color: $gray-1;
+            font-size: $size18px;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
         }
 
         .text2 {
-            color: #757575;
+            color: $gray-1;
             text-align: center;
-            font-size: 21px;
+            font-size: $size21px;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
@@ -36,8 +36,8 @@
             width: 90%;
 
             p {
-                color: #C4C4C4;
-                font-size: 14px;
+                color: $gray-2;
+                font-size: $size14px;
                 font-style: normal;
                 font-weight: 400;
                 line-height: normal;
@@ -45,7 +45,7 @@
 
             .nickNmInput {
                 width: 100%;
-                border: solid 2px #EDEDED;
+                border: solid 2px $white-2;
                 border-width: 0px 0px 2px 0px;
                 font-size: 22px;
                 font-style: normal;
@@ -54,14 +54,14 @@
             }
 
             .nickNmInput::placeholder {
-                color: #C4C4C4;
+                color: $gray-2;
             }
 
 
             .languageContainer {
                 display: flex;
                 width: 100%;
-                height: 40px;
+                height: $size40px;
                 flex-direction: row;
                 justify-content: space-between;
 
@@ -69,29 +69,29 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    border: solid 2px #EDEDED;
-                    width: 157px;
-                    height: 40px;
-                    border-radius: 12px;
-                    font-size: 18px;
+                    border: solid 2px $white-2;
+                    width: $size157px;
+                    height: $size40px;
+                    border-radius: $size12px;
+                    font-size: $size18px;
                     font-style: normal;
                     font-weight: 400;
                     line-height: normal;
                 }
 
                 button:nth-child(1) {
-                    background-color: #ffffff;
-                    color: #757575;
+                    background-color: $white-3;
+                    color: $gray-1;
                 }
 
                 button:nth-child(2) {
-                    background-color: #ffffff;
-                    color: #757575;
+                    background-color: $white-3;
+                    color: $gray-1;
                 }
                 .clinks{
                     border: none !important;
-                    background-color: #509BF8 !important;
-                    color: #FEFEFE !important;
+                    background-color: $main-blue !important;
+                    color: $white-4 !important;
                 }
             }
         }
@@ -107,8 +107,8 @@
                 flex-direction: column;
 
                 .text3 {
-                    color: #424242;
-                    font-size: 14px;
+                    color: $black-1;
+                    font-size: $size14px;
                     font-style: normal;
                     font-weight: 400;
                     line-height: normal;
@@ -116,8 +116,8 @@
 
                 .text4,
                 .text5 {
-                    color: #C4C4C4;
-                    font-size: 12px;
+                    color: $gray-2;
+                    font-size: $size12px;
                     font-style: normal;
                     font-weight: 400;
                     line-height: normal;
@@ -129,59 +129,59 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 12px;
-            background-color: #F9F9F9;
-            width: 335px;
-            height: 50px;
+            border-radius: $size12px;
+            background-color: $white-5;
+            width: $size335px;
+            height: $size50px;
             border: none;
 
             text-align: center;
-            font-size: 18px;
+            font-size: $size18px;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
-            color: #757575;
+            color: $gray-1;
         }
 
         .loginStartBtn {
-            background-color: #ffffff;
+            background-color: $white-3;
             border: none;
-            color: #C4C4C4;
+            color: $gray-2;
             text-align: center;
-            font-size: 14px;
+            font-size: $size14px;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
         }
         .activeStart{
-            background-color: #509BF8 !important;
-            color: #FEFEFE !important;
+            background-color: $main-blue !important;
+            color: $white-4 !important;
         }
     }
 }
 
 .mt20{
-    margin-top: 20px;
+    margin-top: $size20px;
 }
 .mt7{
-    margin-top: 7px;
+    margin-top: $size7px;
 }
 .mt13{
-    margin-top: 13px;
+    margin-top: $size13px;
 }
 .mt39{
-    margin-top: 39px;
+    margin-top: $size39px;
 }
 .mt17{
-    margin-top: 17px;
+    margin-top: $size17px;
 }
 .mt30{
-    margin-top: 30px;
+    margin-top: $size30px;
 }
 .mt35{
-    margin-top: 35px;
+    margin-top: $size35px;
 }
 
 .ml7{
-    margin-left: 7px;
+    margin-left: $size7px;
 }

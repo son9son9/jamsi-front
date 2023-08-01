@@ -4,13 +4,13 @@
     .container {
         display: flex;
         width: 100%;
-        height: 121px;
-        background-color: #FFFFFF;
+        height: $size121px;
+        background-color: $white-3;
         align-items: center;
         justify-content: center;
 
 
-        .topBarContainer{
+        .topBarContainer {
             display: flex;
             flex-direction: row;
             align-items: center;
@@ -18,34 +18,34 @@
             position: relative;
             width: calc(100% - 46px);
 
-            .left{
+            .left {
                 left: 0px;
                 position: absolute;
-                width: 24px;
-                height: 24px;
+                width: $size24px;
+                height: $size24px;
                 border: none;
-                background-color: #000000;
+                background-color: $black-2;
             }
 
-            .center{
+            .center {
                 width: 99px;
                 height: 28px;
                 border: none;
-                background-color: #000000;
+                background-color: $black-2;
             }
 
-            .right{
+            .right {
                 right: 0px;
                 position: absolute;
-                width: 24px;
-                height: 24px;
+                width: $size24px;
+                height: $size24px;
                 border: none;
-                background-color: #000000;
+                background-color: $black-2;
                 margin-left: auto;
             }
 
 
         }
     }
-        
+
 }
