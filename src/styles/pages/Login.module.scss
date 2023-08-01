@@ -2,111 +2,186 @@
 
 @media (max-width: $mobile-widht) {
     .container {
+        display: flex;
         width: 100%;
         height: 100vh;
-        background: #FFF;
-
-        display: flex;
         flex-direction: column;
         align-items: center;
 
+        .line {
+            width: 100%;
+            height: 12px;
 
-        p:nth-of-type(1) {
+            background-color: #F5F5F7;
+        }
+
+        .text1 {
+            color: #757575;
             font-size: 18px;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
-            color: #757575;
-
         }
 
-        p:nth-of-type(2) {
-            color: #ff0000;
+        .text2 {
+            color: #757575;
+            text-align: center;
             font-size: 21px;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
-            color: #757575;
         }
 
-        img {
-            width: 119px;
-            height: 49px;
-            background-color: #000000;
+        .dataBox {
+            width: 90%;
+
+            p {
+                color: #C4C4C4;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+
+            .nickNmInput {
+                width: 100%;
+                border: solid 2px #EDEDED;
+                border-width: 0px 0px 2px 0px;
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+
+            .nickNmInput::placeholder {
+                color: #C4C4C4;
+            }
+
+
+            .languageContainer {
+                display: flex;
+                width: 100%;
+                height: 40px;
+                flex-direction: row;
+                justify-content: space-between;
+
+                button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: solid 2px #EDEDED;
+                    width: 157px;
+                    height: 40px;
+                    border-radius: 12px;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+
+                button:nth-child(1) {
+                    background-color: #ffffff;
+                    color: #757575;
+                }
+
+                button:nth-child(2) {
+                    background-color: #ffffff;
+                    color: #757575;
+                }
+                .clinks{
+                    border: none !important;
+                    background-color: #509BF8 !important;
+                    color: #FEFEFE !important;
+                }
+            }
         }
 
-        button {
+
+        .checkBoxContainer {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+
+            .infoBox {
+                display: flex;
+                flex-direction: column;
+
+                .text3 {
+                    color: #424242;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+
+                .text4,
+                .text5 {
+                    color: #C4C4C4;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+            }
+        }
+
+        .startBtn {
             display: flex;
             align-items: center;
             justify-content: center;
+            border-radius: 12px;
+            background-color: #F9F9F9;
             width: 335px;
-            height: 57px;
-            border-radius: 10px;
+            height: 50px;
             border: none;
 
+            text-align: center;
             font-size: 18px;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
+            color: #757575;
         }
 
-        button:nth-of-type(1) {
-            background: #509BF8;
-            color: #FEFEFE;
-
+        .loginStartBtn {
+            background-color: #ffffff;
+            border: none;
+            color: #C4C4C4;
+            text-align: center;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
         }
-
-        button:nth-of-type(2) {
-            background: #FFF;
-            border: solid 1px #EDEDED !important;
-        }
-
-        .joinContainer {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            color: var(--gray-scale-gray-600, #757575);
-
-            p {
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-                color: #C4C4C4;
-            }
-
-            a {
-                color: #757575;
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-            }
+        .activeStart{
+            background-color: #509BF8 !important;
+            color: #FEFEFE !important;
         }
     }
 }
 
-.mt118{
-    margin-top: 118px;
+.mt20{
+    margin-top: 20px;
 }
-
 .mt7{
     margin-top: 7px;
 }
-.mt26{
-    margin-top: 26px;
+.mt13{
+    margin-top: 13px;
 }
-
-.mt48{
-    margin-top: 48px;
+.mt39{
+    margin-top: 39px;
 }
-
 .mt17{
     margin-top: 17px;
 }
-.mt41{
-    margin-top: 41px;
+.mt30{
+    margin-top: 30px;
 }
-.ml10{
-    margin-left: 10px;
+.mt35{
+    margin-top: 35px;
+}
+
+.ml7{
+    margin-left: 7px;
 }
