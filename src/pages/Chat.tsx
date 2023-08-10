@@ -55,9 +55,6 @@ export default function Chat(): ReactElement {
       sendMessage();
     }
   };
-  const loader = () => {
-    setTimeout(() => {}, 500);
-  };
 
   return (
     <div className={style.container}>
