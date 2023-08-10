@@ -17,7 +17,7 @@ export default function qrTag(): ReactElement {
         <QRCodeSVG
           value="https://app.gather.town/app/4sJuNAr2duwHuDnN/simsimpuri"
           size={180}
-          bgColor={"#f7f7f7"}
+          bgColor={"#f5f5f5"}
           fgColor={"rgb(29, 125, 222)"}
           includeMargin={true}
         />
