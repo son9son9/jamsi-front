@@ -1,0 +1,51 @@
+@import "../global.scss";
+
+@media (max-width: $mobile-widht) {
+    .container {
+        display: flex;
+        width: 100%;
+        height: 121px;
+        background-color: #FFFFFF;
+        align-items: center;
+        justify-content: center;
+
+
+        .topBarContainer{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            width: calc(100% - 46px);
+
+            .left{
+                left: 0px;
+                position: absolute;
+                width: 24px;
+                height: 24px;
+                border: none;
+                background-color: #000000;
+            }
+
+            .center{
+                width: 99px;
+                height: 28px;
+                border: none;
+                background-color: #000000;
+            }
+
+            .right{
+                right: 0px;
+                position: absolute;
+                width: 24px;
+                height: 24px;
+                border: none;
+                background-color: #000000;
+                margin-left: auto;
+            }
+
+
+        }
+    }
+        
+}
