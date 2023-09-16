@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./pages/App";
 import QRTag from "./pages/QRTag";
 import Chat from "./pages/Chat";
+import Modal from "./components/modal/Modal";
 import "./styles/global.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -14,6 +15,7 @@ root.render(
         <Route path="/" element={<App />} />
         <Route path="/qrtag" element={<QRTag />} />
         <Route path="/chat" element={<Chat />} />
+        <Route path="/modal" element={<Modal />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

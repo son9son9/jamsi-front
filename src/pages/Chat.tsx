@@ -1,9 +1,11 @@
 import React, { ReactElement, useEffect, useRef, useState } from "react";
-import style from "../styles/pages/Chat.module.css";
+import style from "../styles/pages/Chat.module.scss";
 import { ReactComponent as Menu } from "../assets/svg/menu-icon.svg";
 import { ReactComponent as Translate } from "../assets/svg/translate-icon.svg";
 import { ReactComponent as Clip } from "../assets/svg/clip-icon.svg";
 import { ReactComponent as Send } from "../assets/svg/send-icon.svg";
+import Modal from "../components/modal/Modal";
+import QrTag from "./QRTag";
 
 // Message Model
 type MessageInfo = {
@@ -87,6 +89,9 @@ export default function Chat(): ReactElement {
           <Send width="20" height="20" stroke="#FFF" />
         </button>
       </div>
+      <Modal display={true} closable={true}>
+        <QrTag />
+      </Modal>
     </div>
   );
 }
