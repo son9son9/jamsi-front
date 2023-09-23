@@ -21,7 +21,7 @@ export default function Chat(): ReactElement {
     // client.onConnect = function (frame) {
 
     // };
-    
+
     // client.onStompError = function (frame) {
     //   console.log('Broker reported error: ' + frame.headers['message']);
     //   console.log('Additional details: ' + frame.body);
@@ -37,7 +37,7 @@ export default function Chat(): ReactElement {
     //   const subscription:StompSubscription = client.subscribe('/queue/test', ()=>{
 
     //   });
-   
+
     return (
         <div className={st.container}>
             <p>이곳은 채팅 페이지 입니다</p>
