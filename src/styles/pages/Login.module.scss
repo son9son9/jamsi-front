@@ -1,6 +1,6 @@
 @import "../global.scss";
 
-@media (max-width: $mobile-widht) {
+@media (max-width: $mobile-width) {
     .container {
         display: flex;
         width: 100%;
@@ -15,173 +15,114 @@
             background-color: $white-1;
         }
 
+        .birdBox {
+            position: relative;
+
+            width: $size132px;
+            height: $size152px;
+
+            margin-top: $size83px;
+
+            .talkBox {
+                position: absolute;
+                transform: translate(-30%, -100%);
+            }
+        }
+
         .text1 {
-            color: $gray-1;
+            color: #757575;
+            text-align: center;
             font-size: $size18px;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
         }
 
-        .text2 {
-            color: $gray-1;
-            text-align: center;
-            font-size: $size21px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
+        .buttonBox {
+            display: flex;
+            flex-direction: row;
+            width: $size300px;
+            justify-content: space-between;
+
+            margin-top: $size40px;
+
+
+
+            button {
+                display: flex;
+                width: $size140px;
+                height: $size40px;
+                align-items: center;
+                justify-content: center;
+
+                text-align: center;
+                font-size: $size18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+
+                border: solid $size1px $main-blue;
+                border-radius: $size8px;
+
+                cursor: pointer;
+            }
+
+            button:nth-child(1) {
+                color: $white-4;
+                background-color: $main-blue;
+            }
+
+            button:nth-child(2) {
+                color: $main-blue;
+                background-color: $white-3;
+            }
         }
 
-        .dataBox {
-            width: 90%;
+        .orLine {
+            display: flex;
+            width: $size300px;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            margin-top: $size72px;
+
+            div:nth-of-type(1) {
+                width: $size121px;
+                height: $size1px;
+                background-color: $gray-2;
+            }
+
+            div:nth-of-type(2) {
+                width: $size121px;
+                height: $size1px;
+                background-color: $gray-2;
+            }
 
             p {
                 color: $gray-2;
-                font-size: $size14px;
+                font-size: $size12px;
                 font-style: normal;
                 font-weight: 400;
                 line-height: normal;
-            }
 
-            .nickNmInput {
-                width: 100%;
-                border: solid 2px $white-2;
-                border-width: 0px 0px 2px 0px;
-                font-size: 22px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-            }
-
-            .nickNmInput::placeholder {
-                color: $gray-2;
-            }
-
-
-            .languageContainer {
-                display: flex;
-                width: 100%;
-                height: $size40px;
-                flex-direction: row;
-                justify-content: space-between;
-
-                button {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    border: solid 2px $white-2;
-                    width: $size157px;
-                    height: $size40px;
-                    border-radius: $size12px;
-                    font-size: $size18px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: normal;
-                }
-
-                button:nth-child(1) {
-                    background-color: $white-3;
-                    color: $gray-1;
-                }
-
-                button:nth-child(2) {
-                    background-color: $white-3;
-                    color: $gray-1;
-                }
-                .clinks{
-                    border: none !important;
-                    background-color: $main-blue !important;
-                    color: $white-4 !important;
-                }
             }
         }
 
+        .orLine+a {
+            margin-top: $size20px;
+            text-decoration: none;
 
-        .checkBoxContainer {
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-
-            .infoBox {
-                display: flex;
-                flex-direction: column;
-
-                .text3 {
-                    color: $black-1;
-                    font-size: $size14px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: normal;
-                }
-
-                .text4,
-                .text5 {
-                    color: $gray-2;
-                    font-size: $size12px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: normal;
-                }
-            }
-        }
-
-        .startBtn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: $size12px;
-            background-color: $white-5;
-            width: $size335px;
-            height: $size50px;
-            border: none;
-
+            color: $main-blue;
             text-align: center;
-            font-size: $size18px;
+            font-size: $size16px;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
-            color: $gray-1;
-        }
-
-        .loginStartBtn {
-            background-color: $white-3;
-            border: none;
-            color: $gray-2;
-            text-align: center;
-            font-size: $size14px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-        }
-        .activeStart{
-            background-color: $main-blue !important;
-            color: $white-4 !important;
         }
     }
 }
 
-.mt20{
-    margin-top: $size20px;
-}
-.mt7{
-    margin-top: $size7px;
-}
-.mt13{
-    margin-top: $size13px;
-}
-.mt39{
-    margin-top: $size39px;
-}
-.mt17{
-    margin-top: $size17px;
-}
-.mt30{
-    margin-top: $size30px;
-}
-.mt35{
-    margin-top: $size35px;
-}
-
-.ml7{
-    margin-left: $size7px;
+.mt32 {
+    margin-top: $size32px;
 }
