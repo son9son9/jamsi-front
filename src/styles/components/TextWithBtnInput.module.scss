@@ -13,14 +13,49 @@
             line-height: normal;
         }
 
+        .box {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            margin-top: $size16px;
+
+            button {
+                display: flex;
+                margin-left: auto;
+
+                width: $size80px;
+                height: $size28px;
+                border: none;
+                border-radius: $size8px;
+                align-items: center;
+                justify-content: center;
+
+                color: $white-4;
+                text-align: center;
+                font-size: $size12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+
+                background-color: $main-blue;
+
+                cursor: pointer;
+
+            }
+
+            img {
+                animation: rotate_image 1s linear infinite;
+                transform-origin: 50% 50%;
+            }
+        }
+
         input {
             border: none;
             font-size: $size20px;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
-
-            margin-top: $size16px;
 
             &:focus-visible {
                 outline: none;
@@ -49,5 +84,11 @@
 
             margin-top: $size4px;
         }
+    }
+}
+
+@keyframes rotate_image {
+    100% {
+        transform: rotate(-360deg);
     }
 }

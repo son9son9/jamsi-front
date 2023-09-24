@@ -6,6 +6,7 @@ import Login from './pages/Login';
 import List from './pages/List';
 import NoAccountLogin from './pages/NoAccountLogin';
 import AccountLogin from './pages/AccountLogin';
+import NewAccount from './pages/NewAccount';
 import './styles/global.scss'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -30,6 +31,9 @@ root.render(
 
         {/* 일반회원 로그인 페이지 */}
         <Route path="/account/login" element={<AccountLogin />} />
+
+        {/* 회원가입 페이지 */}
+        <Route path="/account" element={<NewAccount />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
