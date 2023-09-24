@@ -13,9 +13,9 @@ export default function AccountLogin(): ReactElement {
             <p className={st.text1}>여행지에서 쓸 수 있는</p>
             <p className={st.text2}>세상에서 가장 간단한 채팅 서비스</p>
 
-            <TextInput titleText="이메일 주소" placeholder="asdf@gmail.com" style={{ marginTop: '36px' }} />
+            <TextInput isError={true} errorText="이메일" titleText="이메일 주소" placeholder="asdf@gmail.com" style={{ marginTop: '36px' }} />
 
-            <PasswordInput style={{ marginTop: '32px' }} />
+            <PasswordInput titleText="비밀번호 입력" isError={true} errorText="비밀번호" style={{ marginTop: '32px' }} />
 
             <button className={st.completeBtn}>로그인</button>
 

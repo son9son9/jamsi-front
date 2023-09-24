@@ -16,7 +16,7 @@ export default function NoAccountLogin(): ReactElement {
             <p className={st.text2}>세상에서 가장 간단한 채팅 서비스</p>
 
             {/* 닉네임 입력 */}
-            <TextInput titleText="사용할 닉네임을 입력해주세요" placeholder="예) randk" style={{ marginTop: '36px' }} />
+            <TextInput isError={true} errorText="닉네임" titleText="사용할 닉네임을 입력해주세요" placeholder="예) randk" style={{ marginTop: '36px' }} />
 
             {/* 언어 선택 버튼 */}
             <LangSelect style={{ marginTop: '32px' }} />
