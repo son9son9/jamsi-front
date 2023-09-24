@@ -22,6 +22,10 @@
 
             margin-top: $size16px;
 
+            &:focus-visible {
+                outline: none;
+            }
+
             &::placeholder {
                 color: $gray-2;
             }

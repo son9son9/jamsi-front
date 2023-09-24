@@ -1,15 +1,12 @@
 import { ReactElement, useState, useEffect } from "react";
 import Header from "../components/Header";
 import st from '../styles/pages//NoAccountLogin.module.scss'
-import NickNameInput from "../components/NickNameInput";
+import TextInput from "../components/TextInput";
 import LangSelect from "../components/LangSelect";
 import AgreeClause from "../components/AgreeClause";
 export default function NoAccountLogin(): ReactElement {
     const [agree, setAgree] = useState<boolean>(false);
 
-    useEffect(() => {
-        console.log(agree);
-    }, [agree])
     return (
         <div className={st.container}>
             <Header />
@@ -19,7 +16,7 @@ export default function NoAccountLogin(): ReactElement {
             <p className={st.text2}>세상에서 가장 간단한 채팅 서비스</p>
 
             {/* 닉네임 입력 */}
-            <NickNameInput style={{ marginTop: '36px' }} />
+            <TextInput titleText="사용할 닉네임을 입력해주세요" placeholder="예) randk" style={{ marginTop: '36px' }} />
 
             {/* 언어 선택 버튼 */}
             <LangSelect style={{ marginTop: '32px' }} />

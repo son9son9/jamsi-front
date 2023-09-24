@@ -5,6 +5,7 @@ import Chat from './pages/Chat';
 import Login from './pages/Login';
 import List from './pages/List';
 import NoAccountLogin from './pages/NoAccountLogin';
+import AccountLogin from './pages/AccountLogin';
 import './styles/global.scss'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -26,6 +27,9 @@ root.render(
 
         {/* 비회원 로그인 페이지 */}
         <Route path="/no/account" element={<NoAccountLogin />} />
+
+        {/* 일반회원 로그인 페이지 */}
+        <Route path="/account/login" element={<AccountLogin />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
