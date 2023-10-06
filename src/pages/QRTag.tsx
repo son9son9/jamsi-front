@@ -1,6 +1,5 @@
 import { ReactElement } from "react";
 import { QRCodeSVG } from "qrcode.react";
-import { ReactComponent as Clock } from "../assets/svg/clock-filled-icon.svg";
 import { ReactComponent as Chain } from "../assets/svg/chain-icon.svg";
 import style from "../styles/pages/QRTag.module.scss";
 

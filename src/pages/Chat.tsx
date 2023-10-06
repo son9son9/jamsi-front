@@ -6,6 +6,7 @@ import { ReactComponent as Clip } from "../assets/svg/clip-icon.svg";
 import { ReactComponent as Send } from "../assets/svg/send-icon.svg";
 import Modal from "../components/modal/Modal";
 import QrTag from "./QRTag";
+import SideMenu from "../components/sidemenu/SideMenu";
 
 // Message Model
 type MessageInfo = {
@@ -34,7 +35,11 @@ export default function Chat(): ReactElement {
       content: "ㅎㅎㅎ",
     },
   ]);
+  // 사이드메뉴 활성화 / 비활성화
+  const [isSideMenuOpen, setIsSideMenuOpen] = useState(false);
+
   useEffect(() => {
+    // 말풍선 업데이트 될 때마다 스크롤을 화면 최하단으로 변경
     if (inchatRef.current) {
       inchatRef.current.scrollTop = inchatRef.current.scrollHeight;
     }
@@ -57,11 +62,18 @@ export default function Chat(): ReactElement {
       sendMessage();
     }
   };
+  // 사이드메뉴 토글
+  const sideMenuToggle = () => {
+    setIsSideMenuOpen(!isSideMenuOpen);
+    console.log(isSideMenuOpen);
+  };
 
   return (
     <div className={style.container}>
       <nav className={style.header}>
-        <Menu width="30" height="30" stroke="rgb(30, 144, 255)" />
+        <button className={style["side-menu-btn"]} onClick={sideMenuToggle}>
+          <Menu width="30" height="30" stroke="rgb(30, 144, 255)" />
+        </button>
         <p>도도한 너구리</p>
         <Translate width="30" height="30" />
       </nav>
@@ -89,9 +101,10 @@ export default function Chat(): ReactElement {
           <Send width="20" height="20" stroke="#FFF" />
         </button>
       </div>
-      <Modal display={true} closable={true}>
+      <Modal display={false} closable={true}>
         <QrTag />
       </Modal>
+      <SideMenu sideMenuToggle={sideMenuToggle} isOpen={isSideMenuOpen} />
     </div>
   );
 }
