@@ -65,7 +65,6 @@ export default function Chat(): ReactElement {
   // 사이드메뉴 토글
   const sideMenuToggle = () => {
     setIsSideMenuOpen(!isSideMenuOpen);
-    console.log(isSideMenuOpen);
   };
 
   return (
