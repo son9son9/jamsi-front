@@ -1,49 +1,112 @@
-import React, { ReactElement, useEffect } from 'react';
-import st from '../styles/pages/Home.module.scss'
-// import StompJs, { StompSubscription } from '@stomp/stompjs'
+import React, { ReactElement, useEffect, useRef, useState } from "react";
+import style from "../styles/pages/Chat.module.scss";
+import { ReactComponent as Menu } from "../assets/svg/menu-icon.svg";
+import { ReactComponent as Translate } from "../assets/svg/translate-icon.svg";
+import { ReactComponent as Clip } from "../assets/svg/clip-icon.svg";
+import { ReactComponent as Send } from "../assets/svg/send-icon.svg";
+import { ReactComponent as GuideLogo } from "../assets/svg/jamsi-guide-icon.svg";
+import Modal from "../components/modal/Modal";
+import QrTag from "./QRTag";
 
-
-// const client:StompJs.Client = new StompJs.Client({
-//     brokerURL: 'ws://local.corsmarket.ml/api/ws',
-//     connectHeaders: {
-//       login: 'user',
-//       passcode: 'password',
-//     },
-//     debug: function (str) {
-//       console.log(str);
-//     },
-//     reconnectDelay: 5000, //자동 재 연결
-//     heartbeatIncoming: 4000,
-//     heartbeatOutgoing: 4000,
-//   });
+// Message Model
+type MessageInfo = {
+  type: String;
+  content: String;
+};
 
 export default function Chat(): ReactElement {
-    // client.onConnect = function (frame) {
+  const inchatRef = useRef<HTMLDivElement>(null);
+  const inputBoxRef = useRef<HTMLInputElement>(null);
 
-    // };
+  // 메시지 인풋
+  const [message, setMessage] = useState("");
+  // 배열 형태로 메시지 받아오기
+  const [messages, setMessages] = useState([
+    {
+      type: "notice",
+      content: "도도한 너구리님이 채팅방에 입장하셨습니다.",
+    },
+    {
+      type: "receive",
+      content: "안녕하세요",
+    },
+    {
+      type: "receive",
+      content: "ㅎㅎㅎ",
+    },
+  ]);
+  useEffect(() => {
+    if (inchatRef.current) {
+      inchatRef.current.scrollTop = inchatRef.current.scrollHeight;
+    }
+    // inchatRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages]);
 
-    // client.onStompError = function (frame) {
-    //   console.log('Broker reported error: ' + frame.headers['message']);
-    //   console.log('Additional details: ' + frame.body);
-    // };
-    // client.activate();
+  const onInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setMessage(e.target.value);
+  };
+  const sendMessage = () => {
+    // 메시지 배열에 보낼 메시지 추가
+    if (message !== "") {
+      setMessages((msgs) => [...msgs, { type: "send", content: message }]);
+    }
+    // 메시지 인풋 초기화
+    setMessage("");
+  };
+  const onEnterKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter" && !e.nativeEvent.isComposing) {
+      sendMessage();
+    }
+  };
 
-    // client.publish({
-    //     destination: '/topic/general',
-    //     body: 'Hello world',
-    //     headers: { priority: '9' },
-    //   });
-
-    //   const subscription:StompSubscription = client.subscribe('/queue/test', ()=>{
-
-    //   });
-
-    return (
-        <div className={st.container}>
-            <p>이곳은 채팅 페이지 입니다</p>
-            <div className={`${st.inputContainer} ${st.mt16}`}>
-            </div>
-
+  return (
+    <div className={style.container}>
+      <nav className={style.header}>
+        <Menu width="30" height="30" stroke="rgb(30, 144, 255)" />
+        <p>도도한 너구리</p>
+        <Translate width="30" height="30" />
+      </nav>
+      <div className={style.inchat} ref={inchatRef}>
+        <div className={style["guide-wrapper"]}>
+          <GuideLogo />
+          <div className={style.guide}>
+            비회원으로 이용 중인 사용자는 채팅목록을 저장할 수 없습니다. 함께 나눈 대화를 저장하고 싶다면 로그인 혹은 내보내기 기능을 이용해주세요.
+          </div>
         </div>
-    )
+        {messages.map((msg, index) => {
+          return <Message type={msg.type} content={msg.content} key={index} />;
+        })}
+      </div>
+      <div className={style["input-bar"]}>
+        <div className={style["clip"]}>
+          <Clip width="24" height="24" stroke="rgb(30, 144, 255)" />
+        </div>
+        <div className={style["input-box"]}>
+          <input
+            type="text"
+            className={style["msg-input"]}
+            placeholder="메시지를 입력하세요"
+            onChange={onInputChange}
+            value={message}
+            ref={inputBoxRef}
+            onKeyDown={onEnterKeyDown}
+          />
+        </div>
+        <button type="button" className={style["msg-send-btn"]} onClick={sendMessage}>
+          <Send width="20" height="20" stroke="#FFF" />
+        </button>
+      </div>
+      <Modal display={true} closable={true}>
+        <QrTag />
+      </Modal>
+    </div>
+  );
 }
+
+// 말풍선 컴포넌트
+const Message = (props: MessageInfo) => {
+  if (props.type === "notice") return <div className={style.notice}>{props.content}</div>;
+  else if (props.type === "receive") return <div className={style.receive}>{props.content}</div>;
+  else if (props.type === "send") return <div className={style.send}>{props.content}</div>;
+  else return null;
+};

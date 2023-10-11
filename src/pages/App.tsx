@@ -1,26 +1,14 @@
-import React, { ReactElement } from 'react';
-// import { QRCodeSVG } from 'qrcode.react';
-
-import {Socket, connect} from 'socket.io-client';
-import st from '../styles/pages/Home.module.scss'
-
-// const socket:Socket = connect('http://localhost:4000')
+import React, { ReactElement } from "react";
+import st from "../styles/pages/Home.module.scss";
+import { Link } from "react-router-dom";
 
 export default function Home(): ReactElement {
   return (
     <div className={st.container}>
       <p>이곳은 메인 페이지 입니다</p>
-
-
-      <div className={`${st.inputContainer} ${st.mt16}`}>
-        {/* <QRCodeSVG value="www.naver.com"
-          size={128}
-          bgColor={"#ffffff"}
-          fgColor={"#000000"}
-          includeMargin={false}
-        /> */}
-      </div>
-
+      <Link to="/qrtag">QR 태그 화면으로 넘어가기</Link>
+      <Link to="/chat">Chat 화면으로 넘어가기</Link>
+      <Link to="/modal">모달 화면</Link>
     </div>
-  )
+  );
 }
