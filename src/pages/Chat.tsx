@@ -4,6 +4,7 @@ import { ReactComponent as Menu } from "../assets/svg/menu-icon.svg";
 import { ReactComponent as Translate } from "../assets/svg/translate-icon.svg";
 import { ReactComponent as Clip } from "../assets/svg/clip-icon.svg";
 import { ReactComponent as Send } from "../assets/svg/send-icon.svg";
+import { ReactComponent as GuideLogo } from "../assets/svg/jamsi-guide-icon.svg";
 import Modal from "../components/modal/Modal";
 import QrTag from "./QRTag";
 
@@ -66,6 +67,12 @@ export default function Chat(): ReactElement {
         <Translate width="30" height="30" />
       </nav>
       <div className={style.inchat} ref={inchatRef}>
+        <div className={style["guide-wrapper"]}>
+          <GuideLogo />
+          <div className={style.guide}>
+            비회원으로 이용 중인 사용자는 채팅목록을 저장할 수 없습니다. 함께 나눈 대화를 저장하고 싶다면 로그인 혹은 내보내기 기능을 이용해주세요.
+          </div>
+        </div>
         {messages.map((msg, index) => {
           return <Message type={msg.type} content={msg.content} key={index} />;
         })}
