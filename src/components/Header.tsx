@@ -8,13 +8,13 @@ export default function Header(props: any): ReactElement {
     <div className={st.container}>
       <div className={st["top-bar-container"]}>
         <button className={st.left} onClick={props.toggleMenu}>
-          <Menu width="" height="" stroke="#509bf8" />
+          <Menu width="1.75rem" height="1.75rem" stroke="#509bf8" />
         </button>
         <button className={st.center}>
           <p>도도한 너구리</p>
         </button>
         <button className={st.right}>
-          <Translate width="" height="" />
+          <Translate width="1.75rem" height="1.75rem" />
         </button>
       </div>
     </div>
