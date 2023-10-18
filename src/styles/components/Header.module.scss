@@ -1,51 +1,41 @@
 @import "../global.scss";
 
-@media (max-width: $mobile-width) {
-    .container {
-        display: flex;
-        width: 100%;
-        height: $size121px;
-        background-color: $white-3;
-        align-items: center;
-        justify-content: center;
+@media screen and (max-width: $mobile-width) {
+  .container {
+    display: flex;
+    width: 100%;
+    min-height: 4rem;
+    background-color: $white-3;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
 
+    .top-bar-container {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
 
-        .topBarContainer {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            width: calc(100% - 46px);
+      .left {
+        border: none;
+        background: none;
+        width: 1.75rem;
+      }
 
-            .left {
-                left: 0px;
-                position: absolute;
-                width: $size24px;
-                height: $size24px;
-                border: none;
-                background-color: $black-2;
-            }
+      .center {
+        border: none;
+        background: none;
+        color: $gray-3;
+        font-size: medium;
+      }
 
-            .center {
-                width: 99px;
-                height: 28px;
-                border: none;
-                background-color: $black-2;
-            }
-
-            .right {
-                right: 0px;
-                position: absolute;
-                width: $size24px;
-                height: $size24px;
-                border: none;
-                background-color: $black-2;
-                margin-left: auto;
-            }
-
-
-        }
+      .right {
+        border: none;
+        background: none;
+        width: 1.75rem;
+      }
     }
-
+  }
 }

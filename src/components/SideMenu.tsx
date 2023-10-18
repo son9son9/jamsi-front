@@ -1,12 +1,12 @@
 import { ReactElement, useState } from "react";
-import style from "./SideMenu.module.scss";
-import { ReactComponent as CloseIcon } from "../../assets/svg/close-icon.svg";
-import { ReactComponent as ChatListIcon } from "../../assets/svg/chatting-list-icon.svg";
-import { ReactComponent as SaveIcon } from "../../assets/svg/save-icon.svg";
-import { ReactComponent as MegaphoneIcon } from "../../assets/svg/megaphone-icon.svg";
-import { ReactComponent as QuitIcon } from "../../assets/svg/quit-icon.svg";
-import { ReactComponent as MailIcon } from "../../assets/svg/mail-icon.svg";
-import { ReactComponent as TitleLogo } from "../../assets/svg/jamsi-title-logo.svg";
+import style from "../styles/components/SideMenu.module.scss";
+import { ReactComponent as CloseIcon } from "../assets/svg/close-icon.svg";
+import { ReactComponent as ChatListIcon } from "../assets/svg/chatting-list-icon.svg";
+import { ReactComponent as SaveIcon } from "../assets/svg/save-icon.svg";
+import { ReactComponent as MegaphoneIcon } from "../assets/svg/megaphone-icon.svg";
+import { ReactComponent as QuitIcon } from "../assets/svg/quit-icon.svg";
+import { ReactComponent as MailIcon } from "../assets/svg/mail-icon.svg";
+import { ReactComponent as TitleLogo } from "../assets/svg/jamsi-title-logo.svg";
 
 export default function SideMenu(props: any): ReactElement {
   const toggleMenu = () => {

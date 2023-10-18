@@ -1,13 +1,12 @@
 import React, { ReactElement, useEffect, useRef, useState } from "react";
 import style from "../styles/pages/Chat.module.scss";
-import { ReactComponent as Menu } from "../assets/svg/menu-icon.svg";
-import { ReactComponent as Translate } from "../assets/svg/translate-icon.svg";
 import { ReactComponent as Clip } from "../assets/svg/clip-icon.svg";
 import { ReactComponent as Send } from "../assets/svg/send-icon.svg";
 import { ReactComponent as GuideLogo } from "../assets/svg/jamsi-guide-icon.svg";
-import Modal from "../components/modal/Modal";
+import Header from "../components/Header";
+import Modal from "../components/Modal";
 import QrTag from "./QRTag";
-import SideMenu from "../components/sidemenu/SideMenu";
+import SideMenu from "../components/SideMenu";
 
 // Message Model
 type MessageInfo = {
@@ -29,11 +28,11 @@ export default function Chat(): ReactElement {
     },
     {
       type: "receive",
-      content: "안녕하세요",
+      content: "ㅎㅇㅎㅇ",
     },
     {
       type: "receive",
-      content: "ㅎㅎㅎ",
+      content: "ㅋㅋ",
     },
   ]);
   // 사이드메뉴 활성화 / 비활성화
@@ -70,13 +69,7 @@ export default function Chat(): ReactElement {
 
   return (
     <div className={style.container}>
-      <nav className={style.header}>
-        <button className={style["side-menu-btn"]} onClick={sideMenuToggle}>
-          <Menu width="30" height="30" stroke="rgb(30, 144, 255)" />
-        </button>
-        <p>도도한 너구리</p>
-        <Translate width="30" height="30" />
-      </nav>
+      <Header toggleMenu={sideMenuToggle} />
       <div className={style.inchat} ref={inchatRef}>
         <div className={style["guide-wrapper"]}>
           <GuideLogo />
@@ -90,7 +83,7 @@ export default function Chat(): ReactElement {
       </div>
       <div className={style["input-bar"]}>
         <div className={style["clip"]}>
-          <Clip width="24" height="24" stroke="rgb(30, 144, 255)" />
+          <Clip width="24" height="24" />
         </div>
         <div className={style["input-box"]}>
           <input
@@ -107,7 +100,7 @@ export default function Chat(): ReactElement {
           <Send width="20" height="20" stroke="#FFF" />
         </button>
       </div>
-      <Modal display={false} closable={true}>
+      <Modal display={true} closable={true}>
         <QrTag />
       </Modal>
       <SideMenu sideMenuToggle={sideMenuToggle} isOpen={isSideMenuOpen} />

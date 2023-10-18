@@ -3,8 +3,8 @@
 // closable : 닫기 버튼 또는 배경 클릭으로 닫을 수 있는지 여부. true면 닫을 수 있고 false면 닫을 수 없음.
 
 import { ReactElement, useState } from "react";
-import style from "./Modal.module.scss";
-import { ReactComponent as CloseIcon } from "../../assets/svg/close-icon.svg";
+import style from "../styles/components/Modal.module.scss";
+import { ReactComponent as CloseIcon } from "../assets/svg/close-icon.svg";
 
 export default function Modal(props: any): ReactElement {
   const [isOpen, setIsOpen] = useState<Boolean>(props.display);

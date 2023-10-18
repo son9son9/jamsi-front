@@ -1,6 +1,8 @@
+@import "../global.scss";
+
 .container {
   max-width: 768px;
-  height: 89vh;
+  height: calc(100vh);
   margin: 0 auto;
   text-align: center;
   overflow-y: hidden;
@@ -9,22 +11,6 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-}
-
-.header {
-  width: 100%;
-  min-height: 4rem;
-  padding: 0 1rem;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  text-align: center;
-
-  .side-menu-btn {
-    background: none;
-    border: none;
-  }
 }
 
 .inchat {
@@ -53,17 +39,17 @@
       font-size: 0.8rem;
       line-height: 1.5;
       padding: 0.75rem;
-      background-color: #ededed;
+      background-color: $white-2;
       border-radius: 0.5rem;
     }
   }
   .notice {
-    color: #c4c4c4;
+    color: $gray-2;
     font-size: 0.9rem;
     padding: 1rem 0;
   }
   .receive {
-    background-color: #ededed;
+    background-color: $white-2;
     width: fit-content;
     max-width: 75%;
     text-align: start;
@@ -79,7 +65,7 @@
     animation-name: balloon-pop;
   }
   .send {
-    background-color: rgb(30, 143, 255);
+    background-color: $main-blue;
     width: fit-content;
     max-width: 75%;
     text-align: start;
@@ -112,7 +98,7 @@
   width: 100%;
   min-height: 4rem;
   padding: 0 0.5rem;
-  position: sticky;
+  position: fixed;
   bottom: 0;
 
   display: flex;
@@ -130,6 +116,10 @@
   gap: 1rem;
   align-items: center;
   justify-content: space-between;
+
+  ::placeholder {
+    color: $gray-4;
+  }
 }
 .input-bar .clip {
   width: 2.5rem;
@@ -150,7 +140,7 @@
   font-size: 1rem;
 }
 .input-bar .msg-send-btn {
-  background-color: rgb(30, 143, 255);
+  background-color: $main-blue;
   border: 0;
   border-radius: 4rem;
   width: 2.5rem;
